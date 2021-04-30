@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Customer {
 	//Customer Attributes
-	static String orderNumber;
-	static String userName;
+	String orderNumber;
+	String userName;
 	String userPhone;
 	static String userAddress;
 	String userEmail;
@@ -14,29 +14,22 @@ public class Customer {
 	//Customer Constructor
 	public Customer(String userCity, String orderNumber, String userName, String userPhone, String userAddress, String userEmail) {
 		Customer.userCity = userCity;
-		Customer.orderNumber = orderNumber;
-		Customer.userName = userName;
+		this.orderNumber = orderNumber;
+		this.userName = userName;
 		this.userPhone = userPhone;
 		Customer.userAddress = userAddress;
 		this.userEmail = userEmail;
 	}
 	
-	//method to get userName
-	public static String getUserName() {
-		return userName;
-	}
-	
-	//method to get Customer City
 	public static String getCustomerCity() {
 		return userCity;
 	}
 	
-	//method to get Customer's Address
 	public static String getCustomerAddress() {
 		return userAddress;
 	}
 	
-	//Method to Create Customer
+	//Customer Method
 	public static Customer displayCustomer() {
 		//Order Number
 		int min = 1000;
@@ -63,22 +56,23 @@ public class Customer {
 		System.out.println("Please enter your email address:");
 		String userEmail = input.nextLine();
 		
-		//Create newCustomer and return new Customer Object
-		Customer newCustomer = new Customer(userCity, orderNumber, userName, userPhone, userAddress, userEmail);
+		// close scanner
 		
+		
+		//Create newCustomer and return new Customer Obj
+		Customer newCustomer = new Customer(userCity, orderNumber, userName, userPhone, userAddress, userEmail);
 		return newCustomer;
 		
 	}
 	
 	//Method to Display Customer Details
 	public String customerDetails() {
-		String details = "Order number " + Customer.orderNumber + "\n" +
-				"Customer: " + Customer.userName + "\n" +
+		String details = "Order number " + this.orderNumber + "\n" +
+				"Customer: " + this.userName + "\n" +
 				"Email: " + this.userEmail + "\n" +
 				"Phone number: " + this.userPhone + "\n" +
 				"Location: " + Customer.userCity + "\n";
 		
 		return details;
 	}
-	
 }

@@ -1,0 +1,23 @@
+Order number 3877
+Customer: Seraaj Dude
+Email: a@d.c
+Phone number: 0987654321
+Location: Cape Town
+
+You have ordered the following from Kong Pow Kusine in Cape Town: 
+
+1 x General Tso's Chicken (R78.99) 
+
+6 x Pad Thai (R82.99) 
+
+2 x Kong Pow Rice (R55.99) 
+
+
+Special Instructions: Nope
+
+Total: R688.91
+
+null is nearest to the restaurant and so s/he will be delivering your order to you at:
+null
+
+If you need to contact the restaurant, their number is 079 551 4572.
